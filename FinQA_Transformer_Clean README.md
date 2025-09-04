@@ -78,7 +78,9 @@ The model answers natural-language finance questions based on structured tables 
 
 ### Key Components
 1. **Token Embedding**:
-  x_i \rightarrow e_i \in \mathbb{R}^d
+  $$
+x_i \;\rightarrow\; e_i \in \mathbb{R}^d
+$$
 
 
 2. **Self-Attention**:
