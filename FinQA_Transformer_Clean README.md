@@ -77,22 +77,23 @@ The model answers natural-language finance questions based on structured tables 
 - Output: natural-language answer.
 
 ### Key Components
-1. **Token Embedding**:
-  $$
-x_i \;\rightarrow\; e_i \in \mathbb{R}^d
+**Token Embedding**
+
+$$
+x_i \to e_i \in \mathbb{R}^d
 $$
 
+**Self-Attention**
 
-2. **Self-Attention**:
-   \[
-   	ext{Attention}(Q, K, V) = 	ext{softmax}\left(rac{QK^T}{\sqrt{d_k}}
-ight)V
-   \]
+$$
+\mathrm{Attention}(Q,K,V)=\mathrm{softmax}\!\left(\frac{QK^{\mathsf T}}{\sqrt{d_k}}\right)V
+$$
 
-3. **Loss Function (Cross-Entropy)**:
-   \[
-   \mathcal{L} = -\sum y_i \log(\hat{y}_i)
-   \]
+**Cross-Entropy Loss**
+
+$$
+\mathcal{L}=-\sum_{i} y_i \,\log(\hat{y}_i)
+$$
 
 ### Why It Works
 - Self-attention highlights relevant parts of the table for each question.
